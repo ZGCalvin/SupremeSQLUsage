@@ -50,7 +50,7 @@ public class Driver {
             System.out.println("Press 1 for Register");
             System.out.println("Press 2 for All Currently Active Users");
             System.out.println("Press 3 for All Currently Active Users with id, username and password");
-            System.out.println("Press 4 for Update an User");
+            System.out.println("Press 4 for Update Password");
             System.out.println("Press 5 for Delete an User");
             System.out.print("--->> ");
             switchex = Switchscanner.nextInt();
