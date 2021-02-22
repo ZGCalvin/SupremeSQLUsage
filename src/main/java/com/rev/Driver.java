@@ -7,7 +7,6 @@ import com.rev.models.Transactions;
 
 import session.Session;
 import session.SessionManager;
-import session.SessionStartup;
 import util.PrintSelect;
 
 import java.util.*;
@@ -16,17 +15,16 @@ public class Driver {
 
     public static void main(String[] args) {
         new Driver().Console();
+
     }
 
     private void Console(){
-        //Create SessionStartup Object
-        SessionStartup start = new SessionStartup();
-
-        //Add Classes into SessionStartup
-        start.AddClasses(AppUsers.class);
 
         //Create Session Manager
-        SessionManager sessionManager = start.createSessionManager();
+        SessionManager sessionManager = new SessionManager();
+
+        // Add Classes into Session Manager
+        sessionManager.AddClasses(AppUsers.class);
 
         //Create Session
         Session session = sessionManager.getSession();
